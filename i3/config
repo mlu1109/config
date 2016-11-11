@@ -225,6 +225,4 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-#Wallpaper
 
-#exec_always feh --bg-scale /home/qweqwe/Pictures/wallpaper.jpg
