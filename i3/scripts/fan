@@ -1,0 +1,5 @@
+#!/bin/bash
+
+fan="$(sensors | grep fan)"
+fan="${fan//[!0-9]/}"
+echo "${fan:1} RPM"
