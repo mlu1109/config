@@ -106,10 +106,10 @@ interval=10
 # Fan
 #
 # Uses lm-sensors
-[fan]
-command=~/.config/i3/scripts/fan
-label=
-interval=5
+#[fan]
+#command=~/.config/i3/scripts/fan
+#label=
+#interval=5
 
 # Temperature
 #
@@ -139,11 +139,11 @@ interval=10
 # Battery indicator
 #
 # The battery instance defaults to 0.
-[battery]
+#[battery]
 #label=BAT
-label=
+#label=
 #instance=1
-interval=30
+#interval=30
 
 # Volume indicator
 #

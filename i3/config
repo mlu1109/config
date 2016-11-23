@@ -1,5 +1,5 @@
 # Mod
-set $mod Mod4
+set $mod Mod1
 
 # Font
 font pango:DejaVu Sans Mono 10
@@ -72,15 +72,15 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 set $workspace1 "1: "
-set $workspace2 "2: "
-set $workspace3 "3: "
-set $workspace4 "4: "
+set $workspace2 "2: "
+set $workspace3 "3: "
+set $workspace4 "4: "
 set $workspace5 "5: "
 set $workspace6 "6: "
-set $workspace7 "7: "
+set $workspace7 "7: "
 set $workspace8 "8: "
-set $workspace9 "9: "
-set $workspace10 "10: "
+set $workspace9 "9: "
+set $workspace10 "10: "
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -106,20 +106,25 @@ bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
+# Assign certain programs to a specific workspace when they are started
 #assign [class="Gnome-terminal"] $workspace1
 assign [class="Thunderbird"] $workspace8
-assign [class="Google-chrome"] $workspace9
-assign [class="Firefox"] $workspace9
-for_window [class="Spotify"] move to workspace $workspace10 #Workaround, https://community.spotify.com/t5/Desktop-Linux-Windows-Web-Player/WM-CLASS-window-property-on-Linux/m-p/1315693#M153640
+assign [class="Google-chrome"] $workspace2
+assign [class="Firefox"] $workspace2
+assign [class="Skype"] $workspace10
+assign [class="jetbrains-clion"] $workspace4
+for_window [class="Spotify"] move to workspace $workspace9 #Workaround, https://community.spotify.com/t5/Desktop-Linux-Windows-Web-Player/WM-CLASS-window-property-on-Linux/m-p/1315693#M153640
 
 # Autostart
-
 exec --no-startup-id nm-applet
-
-exec i3-msg "workspace 7: ;; exec gnome-terminal -e weechat"
+exec i3-msg "workspace 3: ;; exec gnome-terminal -e weechat"
 exec i3-msg "workspace 8: ; exec thunderbird"
-exec i3-msg "workspace 9: ; exec google-chrome"
+exec i3-msg "workspace 2: ; exec google-chrome"
 exec i3-msg "workspace 1: ; exec gnome-terminal"
+
+# Make all windows on workspace 10 floating
+for_window [workspace=$workspace10] floating enable
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
