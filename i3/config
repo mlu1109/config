@@ -1,5 +1,5 @@
 # Mod
-set $mod Mod1
+set $mod Mod4
 
 # Font
 font pango:DejaVu Sans Mono 10
@@ -109,18 +109,24 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 # Assign certain programs to a specific workspace when they are started
 #assign [class="Gnome-terminal"] $workspace1
 assign [class="Thunderbird"] $workspace8
-assign [class="Google-chrome"] $workspace2
+#assign [class="Google-chrome"] $workspace2
 assign [class="Firefox"] $workspace2
 assign [class="Skype"] $workspace10
 assign [class="jetbrains-clion"] $workspace4
 for_window [class="Spotify"] move to workspace $workspace9 #Workaround, https://community.spotify.com/t5/Desktop-Linux-Windows-Web-Player/WM-CLASS-window-property-on-Linux/m-p/1315693#M153640
 
+# Floating per default
+
+for_window [class="Pavucontrol"] floating enable
+for_window [window_role="pop-up"] floating enable
+
 # Autostart
 exec --no-startup-id nm-applet
-exec i3-msg "workspace 3: ;; exec gnome-terminal -e weechat"
-exec i3-msg "workspace 8: ; exec thunderbird"
-exec i3-msg "workspace 2: ; exec google-chrome"
-exec i3-msg "workspace 1: ; exec gnome-terminal"
+exec i3-msg "workspace 3: ;; exec roxterm -e weechat"
+#exec i3-msg "workspace 8: ; exec thunderbird"
+#exec i3-msg "workspace 2: ; exec google-chrome"
+exec i3-msg "workspace 1: ; exec roxterm"
+exec --no-startup-id xsetroot -solid "#000000"
 
 # Make all windows on workspace 10 floating
 for_window [workspace=$workspace10] floating enable

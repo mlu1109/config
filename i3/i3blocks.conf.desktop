@@ -150,14 +150,14 @@ interval=10
 # The first parameter sets the step (and units to display)
 # The second parameter overrides the mixer selection
 # See the script for details.
-[volume]
+[volume2]
 label=
 #label=♪
 instance=Master
 #instance=PCM
 interval=1
 signal=10
-command=/usr/share/i3blocks/volume 5 pulse
+command=~/.config/i3/scripts/volume2 5 pulse
 
 # Date Time
 #
