@@ -122,7 +122,7 @@ for_window [window_role="pop-up"] floating enable
 
 # Autostart
 exec --no-startup-id nm-applet
-exec i3-msg "workspace 3: ;; exec roxterm -e weechat"
+
 #exec i3-msg "workspace 8: ; exec thunderbird"
 #exec i3-msg "workspace 2: ; exec google-chrome"
 exec i3-msg "workspace 1: ; exec roxterm"
@@ -185,26 +185,27 @@ set $p_sl_color #ffffff
 set $p_sp_color #888888
 
 # Colors		Border	Background	Text
-client.focused		$a_br_color	$a_bg_color	$a_fo_color
-client.unfocused	$i_br_color	$i_bg_color	$i_fo_color
-client.urgent		$u_br_color	$u_bg_color	$u_fo_color
-client.background	$c_bg_color
+# client.focused	$a_br_color	$a_bg_color	$a_fo_color
+# client.unfocused	$i_br_color	$i_bg_color	$i_fo_color
+# client.urgent		$u_br_color	$u_bg_color	$u_fo_color
+# client.background	$c_bg_color
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	colors {
-		# Whole color settings
-		background $c_bg_color
-		statusline $p_sl_color
-		separator  $p_sp_color
+	# colors {
+	#	# Whole color settings
+	#	background $c_bg_color
+	#	statusline $p_sl_color
+	#	separator  $p_sp_color
 
-		# Type			Border		Background	Font
-		focused_workspace	$a_br_color	$a_bg_color	$a_fo_color
-		active_workspace	$i_br_color 	$a_ws_bg_color	$a_fo_color
-		inactive_workspace	$i_br_color	$i_bg_color	$i_fo_color
-		urgent_workspace	$u_br_color	$u_bg_color	$u_fo_color
-	}
+	#	# Type			Border		Background	Font
+	#	focused_workspace	$a_br_color	$a_bg_color	$a_fo_color
+	#	active_workspace	$i_br_color 	$a_ws_bg_color	$a_fo_color
+	#	inactive_workspace	$i_br_color	$i_bg_color	$i_fo_color
+	#	urgent_workspace	$u_br_color	$u_bg_color	$u_fo_color
+	#}
+
 	# i3bar position
 	position top
 	font pango:FontAwesome, DejaVu Sans Mono 10
