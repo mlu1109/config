@@ -21,4 +21,4 @@ while True:
 if 0 < u:
   print("<span color='lime'> <b>%s</b></span>"% u)
 else:
-  print("%s"% u)
+  print(" %s"% u)
