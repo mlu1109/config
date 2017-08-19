@@ -99,8 +99,9 @@ interval=10
 #
 # Support multiple VPN, with colors.
 [openvpn]
-command=~/.config/i3/scripts/nm-openvpn
+markup=pango
 label=
+command=~/.config/i3/scripts/nm-openvpn.py
 interval=10
 
 # Fan
