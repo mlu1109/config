@@ -170,7 +170,7 @@ interval=1
 # Updates
 [updates]
 markup=pango
-interval=3600
+interval=1800
 command=~/.config/i3/scripts/updates.py $BLOCK_BUTTON
 
 
