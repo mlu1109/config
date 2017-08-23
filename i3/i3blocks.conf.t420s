@@ -100,7 +100,8 @@ interval=10
 #
 # Support multiple VPN, with colors.
 [openvpn]
-command=~/.config/i3/scripts/nm-openvpn
+markup=pango
+command=~/.config/i3/scripts/nm-openvpn.py
 label=
 interval=10
 
@@ -167,3 +168,8 @@ label=
 command=date '+%Y-%m-%d %H:%M:%S'
 interval=1
 
+# Updates
+[updates]
+markup=pango
+interval=1800
+command=~/.config/i3/scripts/updates.py $BLOCK_BUTTON
