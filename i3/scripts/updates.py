@@ -13,11 +13,11 @@ from sys import argv
 if 1 < len(argv) and argv[1] == '1':
   call(['x-terminal-emulator', '-e', 'apt list --upgradable'])
 
-call(['sudo', 'apt update'])
-
 o = check_output(['apt', 'list', '--upgradable']).decode('utf-8')
 u = o.count('upgradable')
 if 0 < u:
   print("<span color='lime'> <b>%s</b></span>"% u)
 else:
   print(" %s"% u)
+
+call(['sudo', 'apt', 'update'])
