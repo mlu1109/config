@@ -14,7 +14,17 @@ while true; do
 		[Yy]* ) break;
 	esac
 done
-echo "Cleaning up..."
-fusermount -u $LDIR
-rm -rfi $LDIR
-echo "Done."
+echo "* Cleaning up..."
+while true; do
+	if fusermount -u $LDIR; then
+		rm -rfi $LDIR
+		echo "* Done."
+		break
+	else
+		read -p "Could not unmount, try again? (N) " n
+		case $n in
+			[Nn]* ) echo "* Did not remove folder" $LDIR
+							break
+		esac
+	fi
+done
