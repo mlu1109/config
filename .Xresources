@@ -1,0 +1,19 @@
+Xterm*termName: xterm-256color
+URxvt*termName: rxvt-256color
+
+! Color theme
+#include "./Documents/dotfiles/.Xresources.d/colors/lychnobite.redo.asc"
+
+! Font config (https://wiki.archlinux.org/index.php/font_configuration)
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+URxvt*font:     xft:Inconsolata:size=12
+xterm*faceName: xft:Inconsolata:size=12
+
+! Border
+URxvt*scrollBar: false  
