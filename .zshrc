@@ -71,3 +71,4 @@ zstyle ':completion:*' menu select
 # -------
 
 alias ls='ls --color'
+alias hgrep='history | grep'
