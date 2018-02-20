@@ -248,3 +248,5 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xrandr --output DP-4 --mode 1920x1080 --rate 144
 exec --no-startup-id feh --bg-fill ~/.wallpaper
 exec --no-startup-id nvidia-settings -l
+exec --no-startup-id pulseaudio -D
+
