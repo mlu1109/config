@@ -3,6 +3,10 @@
     "files.autoSave": "afterDelay",
     "window.zoomLevel": -1,
     "editor.parameterHints": false,
-    "workbench.colorTheme": "Dark+ Material",
-    "git.enableSmartCommit": true
+    "editor.detectIndentation": false,
+    "git.enableSmartCommit": true,
+    "go.gopath": "/home/matti/go",
+    "python.linting.enabled": true,
+    "python.pythonPath": "/usr/bin/python3",
+    "explorer.confirmDragAndDrop": false
 }
