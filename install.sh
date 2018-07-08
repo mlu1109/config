@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt update
+
 echo Setting up git and cloning configs...
 sudo apt install -y git
 mkdir ~/Repos
@@ -16,7 +18,6 @@ ln -s ~/Repos/dotfiles/.Xresources ~/.Xresources
 ln -s ~/Repos/dotfiles/.Xresources.d ~/.Xresources.d
 xrdb -merge ~/.Xresources
 echo xrdb -merge ~/.Xresources >> ~/.profile
-
 
 echo Setting up zsh
 sudo apt install -y zsh
