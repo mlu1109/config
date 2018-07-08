@@ -2,7 +2,7 @@ Xterm*termName: xterm-256color
 URxvt*termName: rxvt-256color
 
 ! Color theme
-#include "./Documents/dotfiles/.Xresources.d/colors/lychnobite.redo.asc"
+#include ".Xresources.d/colors/lychnobite.redo.asc"
 
 ! Font config (https://wiki.archlinux.org/index.php/font_configuration)
 Xft.autohint: 0
