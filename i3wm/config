@@ -36,7 +36,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -nb '#1c1c1c' -nf '#ffffff' -sb '#1bfd8a' -sf '#000000' -l 10
+bindsym $mod+d exec dmenu_run -nb '#1c1c1c' -nf '#ffffff' -sb '#2ba3ff' -sf '#000000' -l 10
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -191,8 +191,16 @@ bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 # Colors & Bar
 # ------------
 
-set $bgclr	#1c1c1c
+set $bgclr	#232629
+set $bgclr_a    #183956
+set $bgclr_urg  #900000
+
 set $brdclr	#333333
+set $brdclr_a   #42a1f4
+set $brdclr_urg #ff0000
+
+set $txt        #c4c9ce
+set $txt_a      #ffffff
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -202,27 +210,25 @@ bar {
 		
 	colors {
         background	$bgclr
-        statusline	#ffffff
+        statusline	$txt
         separator	$brdclr
 
-	# class			border	bground	text
-        focused_workspace	#1bfd8a $bgclr	#ffffff
-        active_workspace	$brdclr	$bgclr	#ffffff
-        inactive_workspace	$brdclr	$bgclr	#999999
-        urgent_workspace	#FF0000 $bgclr 	#ffffff
+	# class			border	        bground	        text
+        focused_workspace	$brdclr_a       $bgclr_a	$txt_a
+        active_workspace	$brdclr	        $bgclr_a	$txt_a
+        inactive_workspace	$brdclr	        $bgclr	        $txt
+        urgent_workspace	$brdclr_urg     $bgclr_urg 	$txt_a
 	}
 
 	font pango:inconsolata, fontawesome 14
 }
 
-# class                 	border  bground text    indicator       child_border
-client.focused			$brdclr $bgclr  #ffffff #1bfd8a	        #333333
-client.focused_inactive		$brdclr $bgclr  #808080 #222222	        #222222
-client.unfocused		$brdclr $bgclr  #808080 #222222	        #222222
-client.urgent			#2f343a #900000 #ffffff #222222	        #222222
-client.placeholder		$brdclr $bgclr  #ffffff #1bfd8a	        #333333
-
-client.background		#000000
+# class                 	border          bground         text    indicator       child_border
+client.focused			$brdclr_a       $bgclr_a        $txt    #1bfd8a	        $brdclr_a
+client.focused_inactive		$brdclr         $bgclr          $txt_ia #222222	        $brdclr
+client.unfocused		$brdclr         $bgclr          $txt_ia #222222	        $brdclr
+client.urgent			$brdclr         $bgclr_urg      $txt    #222222	        $brdclr
+client.placeholder		$brdclr         $bgclr          $txt    #1bfd8a	        #333333
 
 # --------------
 # Assign windows
@@ -249,4 +255,3 @@ exec --no-startup-id xrandr --output DP-4 --mode 1920x1080 --rate 144
 exec --no-startup-id feh --bg-fill ~/.wallpaper
 exec --no-startup-id nvidia-settings -l
 exec --no-startup-id pulseaudio -D
-
